@@ -1,0 +1,10 @@
+services:
+  scrim-bot:
+    build: .
+    restart: unless-stopped
+    env_file: .env
+    volumes:
+      - scrim-data:/data
+
+volumes:
+  scrim-data:
